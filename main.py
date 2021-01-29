@@ -47,7 +47,7 @@ class HaikangHandle():
         # 参与签名的头
         self.__get_header_sign_headers()
         self.__headers['Date'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        self.__headers['X-Ca-Signature'] = "TODO"
+
 
     def __get_header_sign_headers(self):
         _a = sorted(self.__headers.items(), key=lambda x: x[0], reverse=False)
@@ -129,8 +129,8 @@ def main():
                       'ip', 1443, 'https')
 
     # res = s.get_play_list()
-    # s.do_post(url,data) TODO
-    res = s.get_rtsp_stream('externalIndexCode')
+    # res = s.do_post(url,data) TODO
+
 
     print(res)
 
